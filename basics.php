@@ -66,10 +66,4 @@
     echo "<br>";
     echo str_replace("world", "PHP", $stringTwo);
 
-    // working with Forms and Input Handling
-
-
-
-
-
 ?>

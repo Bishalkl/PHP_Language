@@ -1,0 +1,39 @@
+Steps for Image Upload in PHP
+
+    Check if the request method is POST:
+        Verify that the file upload process begins only with a POST request.
+
+    Define an upload directory:
+        Set the directory where uploaded files will be stored (e.g., "upload/").
+        Ensure the directory path ends with a slash (/).
+
+    Retrieve the uploaded file's name:
+        Use basename() to safely extract the file name.
+
+    Set allowed MIME types:
+        Define a list of acceptable image MIME types (e.g., JPEG, PNG, GIF, WebP).
+
+    Verify if a file was uploaded:
+        Check if the file exists in $_FILES['file']['tmp_name'].
+
+    Check the MIME type:
+        Use mime_content_type() to get the uploaded file's type and confirm it's valid.
+
+    Validate the file extension:
+        Compare the file extension (e.g., jpg, png) with a list of allowed extensions.
+
+    Restrict file size:
+        Define a maximum file size limit (e.g., 5 MB).
+
+    Check the upload directory:
+        Verify if the directory exists.
+        If not, create it with mkdir() and set the appropriate permissions.
+
+    Generate a unique file name:
+        Prevent file overwrites by appending a unique identifier (e.g., uniqid()).
+
+    Move the uploaded file:
+        Use move_uploaded_file() to save the file to the designated directory.
+
+    Return success or failure message:
+        Provide feedback on the upload status.
